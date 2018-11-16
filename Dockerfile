@@ -6,6 +6,6 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update \
   && apt-get install --no-install-recommends -y pandoc \
   && apt-get clean
 
-WORKDIR /pandoc
+VOLUME [ "/data" ]
 
 ENTRYPOINT [ "/usr/bin/pandoc" ]
